@@ -1,0 +1,9 @@
+body { margin: 0; font-family: Arial, sans-serif; }
+.page { padding: 16px; }
+.toolbar { display: flex; gap: 12px; align-items: center; margin-bottom: 12px; flex-wrap: wrap; }
+.grid { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.card { border: 1px solid #ddd; border-radius: 8px; padding: 8px; margin-bottom: 8px; }
+.events { max-height: 300px; overflow: auto; border: 1px solid #ddd; padding: 8px; }
+button { margin-right: 6px; }
