@@ -54,17 +54,13 @@ VITE_CONVEX_URL=https://<your-convex-deployment>.convex.cloud
 npm run convex:dev
 ```
 
-4. In a second terminal, start desktop UI dev server:
-
-```bash
-npm run dev:desk
-```
-
-5. Run Tauri desktop shell (from root):
+4. Run Tauri desktop shell (from root):
 
 ```bash
 npm run tauri --workspace apps/desk dev
 ```
+
+> `tauri dev` automatically starts the Vite dev server via `beforeDevCommand`, so you do **not** need to run `npm run dev:desk` in another terminal.
 
 ## Build EXE (Windows)
 
@@ -83,9 +79,6 @@ npm install
 VITE_CONVEX_URL=https://<your-convex-deployment>.convex.cloud
 "@ | Set-Content apps/desk/.env
 npm run convex:dev
-# new terminal
-cd C:\path\to\DigitalCo
-npm run dev:desk
 # new terminal
 cd C:\path\to\DigitalCo
 npm run tauri --workspace apps/desk dev
