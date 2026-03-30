@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Photo Saver Icon">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5c8dff"/>
+      <stop offset="1" stop-color="#8f53ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#0b1020"/>
+  <rect x="96" y="130" width="320" height="252" rx="36" fill="url(#g)"/>
+  <circle cx="178" cy="215" r="30" fill="#fff" opacity=".95"/>
+  <path d="M128 334l78-78a22 22 0 0 1 31 0l34 34 40-40a22 22 0 0 1 31 0l42 42v42H128z" fill="#fff"/>
+</svg>

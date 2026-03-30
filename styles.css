@@ -1,0 +1,92 @@
+:root {
+  color-scheme: dark;
+  --bg: #0b1020;
+  --card: #121a31;
+  --ink: #f8f8ff;
+  --muted: #a9b2d5;
+  --accent: #5c8dff;
+  --danger: #f06c82;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: radial-gradient(circle at top, #19203d 0%, var(--bg) 50%);
+  color: var(--ink);
+  min-height: 100svh;
+}
+
+.app {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+header h1 { margin-bottom: .4rem; }
+header p { margin: 0; color: var(--muted); }
+
+.camera-card,
+.gallery-card {
+  background: color-mix(in srgb, var(--card) 92%, black);
+  border: 1px solid rgba(255, 255, 255, .09);
+  border-radius: 18px;
+  padding: 1rem;
+}
+
+video {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 14px;
+  background: #03070f;
+}
+
+.controls,
+.photo-actions {
+  margin-top: .8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+button,
+a[data-action="download"] {
+  border: 0;
+  border-radius: 999px;
+  padding: .55rem 1rem;
+  font: inherit;
+  cursor: pointer;
+  color: var(--ink);
+  background: #273355;
+  text-decoration: none;
+}
+
+button.primary { background: var(--accent); }
+button.danger { background: var(--danger); }
+button:disabled { opacity: .5; cursor: not-allowed; }
+
+.hint { color: var(--muted); margin: 0 0 .75rem; }
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: .75rem;
+}
+
+.photo-item {
+  padding: .5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, .08);
+  background: rgba(0, 0, 0, .2);
+}
+
+.photo-item img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 8px;
+}
