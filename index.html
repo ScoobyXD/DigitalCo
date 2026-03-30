@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b1020" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Photo Saver" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/assets/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/assets/icon.svg" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Photo Saver PWA</title>
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Photo Saver</h1>
+        <p>Take a photo and save it to your iPhone.</p>
+      </header>
+
+      <section class="camera-card">
+        <video id="preview" autoplay playsinline muted></video>
+        <canvas id="canvas" hidden></canvas>
+
+        <div class="controls">
+          <button id="startCamera" class="primary">Open Camera</button>
+          <button id="capturePhoto" disabled>Take Photo</button>
+          <button id="switchCamera" disabled>Switch Camera</button>
+        </div>
+      </section>
+
+      <section class="gallery-card">
+        <h2>Saved in this app</h2>
+        <p class="hint">Photos stay on your phone in browser storage. Use “Share / Save Image” to copy one into your Photos app.</p>
+        <div id="photos" class="photos"></div>
+      </section>
+    </main>
+
+    <template id="photo-template">
+      <article class="photo-item">
+        <img alt="Captured photo" loading="lazy" />
+        <div class="photo-actions">
+          <button data-action="share">Share / Save</button>
+          <a data-action="download" download="photo-saver.jpg">Download</a>
+          <button data-action="remove" class="danger">Delete</button>
+        </div>
+      </article>
+    </template>
+
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>

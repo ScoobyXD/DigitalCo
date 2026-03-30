@@ -1,0 +1,17 @@
+{
+  "name": "Photo Saver",
+  "short_name": "PhotoSaver",
+  "description": "Take photos in a PWA and save them on iPhone.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b1020",
+  "theme_color": "#0b1020",
+  "icons": [
+    {
+      "src": "/assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

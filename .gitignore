@@ -1,12 +1,3 @@
-node_modules
-**/node_modules
-.env
-.env.local
-.convex
-apps/desk/dist
-apps/desk/src-tauri/target
-reports/*.pptx
-*.log
 .DS_Store
-data/sample.xlsx
-Inventory.xlsx
+node_modules/
+*.log
